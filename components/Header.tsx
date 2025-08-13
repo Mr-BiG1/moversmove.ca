@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -49,9 +50,8 @@ export function Header() {
   }
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
-    }`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
+      }`}>
       {/* Top bar */}
       <div className="bg-primary text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
@@ -78,11 +78,25 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">M</span>
+            <div className="w-25 h-10 bg-gradient-to-br rounded-lg flex items-center justify-center">
+              {/* <span className="text-white font-bold text-lg">M</span> */}
+              {/* <Image
+                src="https://res.cloudinary.com/dflabr49y/image/upload/v1755112588/cropped-logo_tgjgt1.png"
+                alt="Movers Move logo"
+                width={200}
+                height={200}
+                priority
+              /> */}
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">{COMPANY_INFO.name}</h1>
+              <Image
+                src="https://res.cloudinary.com/dflabr49y/image/upload/v1755112588/cropped-logo_tgjgt1.png"
+                alt="Movers Move logo"
+                width={200}
+                height={200}
+                priority
+              />
+              {/* <h1 className="text-xl font-bold text-gray-900">{COMPANY_INFO.name}</h1> */}
               <p className="text-xs text-gray-600">Professional Moving Services</p>
             </div>
           </Link>
@@ -92,7 +106,7 @@ export function Header() {
             <Link href="/" className="text-gray-700 hover:text-primary transition-colors font-medium">
               Home
             </Link>
-            
+
             {/* Services Dropdown */}
             <div
               className="relative"
@@ -103,7 +117,7 @@ export function Header() {
                 <span>Services</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
-              
+
               <AnimatePresence>
                 {activeDropdown === 'services' && (
                   <motion.div
@@ -144,7 +158,7 @@ export function Header() {
                 <span>Transport</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
-              
+
               <AnimatePresence>
                 {activeDropdown === 'transport' && (
                   <motion.div
@@ -232,7 +246,7 @@ export function Header() {
               >
                 Home
               </Link>
-              
+
               <div className="space-y-2">
                 <div className="font-medium text-gray-900 mb-2">Services</div>
                 {services.map((service) => (

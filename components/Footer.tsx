@@ -3,13 +3,14 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
+import Image from 'next/image'
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
   Linkedin,
   Truck,
   Shield,
@@ -69,15 +70,30 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
+              <div className="w-10 h-10 bg-gradient-to-br  rounded-lg flex items-center justify-center">
+                {/* <span className="text-white font-bold text-lg">M</span> */}
+                {/* <Image
+                  src="https://res.cloudinary.com/dflabr49y/image/upload/v1755112588/cropped-logo_tgjgt1.png"
+                  alt="Movers Move logo"
+                  width={200}
+                  height={200}
+                  priority
+
+                /> */}
               </div>
               <div>
-                <h3 className="text-xl font-bold">{COMPANY_INFO.name}</h3>
+                <Image
+                  src="https://res.cloudinary.com/dflabr49y/image/upload/v1755112588/cropped-logo_tgjgt1.png"
+                  alt="Movers Move logo"
+                  width={200}
+                  height={200}
+                  priority
+
+                />
                 <p className="text-sm text-gray-400">Professional Moving Services</p>
               </div>
             </div>
-            
+
             <p className="text-gray-300 text-sm leading-relaxed">
               {COMPANY_INFO.description}
             </p>
@@ -108,7 +124,7 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-gray-300 hover:text-accent transition-colors text-sm"
                   >
@@ -125,7 +141,7 @@ export function Footer() {
             <ul className="space-y-2">
               {transportLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-gray-300 hover:text-accent transition-colors text-sm"
                   >
@@ -140,7 +156,7 @@ export function Footer() {
               <ul className="space-y-2">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-gray-300 hover:text-accent transition-colors text-sm"
                     >
@@ -187,8 +203,8 @@ export function Footer() {
                   className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
                   required
                 />
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
                 >
                   Subscribe
