@@ -27,7 +27,7 @@ let transporter: nodemailer.Transporter | null = null;
 let resend: Resend | null = null;
 
 if (emailConfig.smtp.host && emailConfig.smtp.auth.user) {
-  transporter = nodemailer.createTransporter(emailConfig.smtp);
+  transporter = nodemailer.createTransport(emailConfig.smtp);
 }
 
 if (emailConfig.resendApiKey) {

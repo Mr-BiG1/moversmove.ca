@@ -96,7 +96,7 @@ export const rateLimit = async (identifier: string): Promise<{
         memoryStore.set(key, newEntry);
         
         // Clean up old entries
-        for (const [k, v] of memoryStore.entries()) {
+        for (const [k, v] of Array.from(memoryStore.entries())) {
           if (now > v.resetTime) {
             memoryStore.delete(k);
           }

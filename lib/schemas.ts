@@ -11,6 +11,7 @@ export const contactSchema = z.object({
   address: z.string().min(10, 'Please enter a complete address').max(200, 'Address must be less than 200 characters'),
   inquiry: z.string().min(10, 'Message must be at least 10 characters').max(1000, 'Message must be less than 1000 characters'),
   turnstileToken: z.string().min(1, 'Please complete the security check'),
+  pageSource: z.string().optional(),
 });
 
 // Quote form schema
@@ -24,6 +25,7 @@ export const quoteSchema = z.object({
   preferredDate: z.string().optional(),
   serviceType: z.enum(['Local Moves', 'International Moves', 'Residential Moves', 'Commercial Moves', 'Specialty Moves', 'Storage Solutions']),
   turnstileToken: z.string().min(1, 'Please complete the security check'),
+  pageSource: z.string().optional(),
 });
 
 // FAQ question form schema
@@ -32,6 +34,7 @@ export const faqQuestionSchema = z.object({
   email: emailSchema,
   question: z.string().min(10, 'Question must be at least 10 characters').max(500, 'Question must be less than 500 characters'),
   turnstileToken: z.string().min(1, 'Please complete the security check'),
+  pageSource: z.string().optional(),
 });
 
 // Payment calculator schema
