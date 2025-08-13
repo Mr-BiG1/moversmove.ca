@@ -21,28 +21,32 @@ const transportMethods = [
     description: 'Flexible and cost-effective sea freight solutions',
     icon: Ship,
     href: '/transport/sea-freight',
-    features: ['Container shipping', 'Bulk cargo', 'Global network', 'Cost effective']
+    features: ['Container shipping', 'Bulk cargo', 'International routes', 'Cost-effective'],
+    backgroundImage: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     title: 'Air Freight',
-    description: 'Worldwide Air Freight services',
+    description: 'Worldwide air freight services',
     icon: Plane,
     href: '/transport/air-freight',
-    features: ['Express delivery', 'Global coverage', 'Priority handling', 'Fast transit']
+    features: ['Express delivery', 'Global network', 'Priority handling', 'Fast transit'],
+    backgroundImage: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     title: 'Road Freight',
     description: 'Overland logistics and cross-border',
     icon: Truck,
     href: '/transport/road-freight',
-    features: ['Cross-border', 'Flexible routes', 'Real-time tracking', 'Reliable service']
+    features: ['Cross-border', 'LTL & FTL', 'Real-time tracking', 'Flexible scheduling'],
+    backgroundImage: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     title: 'Automotive Shipping',
     description: 'International auto transport with documentation',
     icon: Car,
     href: '/transport/automotive-shipping',
-    features: ['Vehicle transport', 'Documentation', 'Insurance', 'Door-to-door']
+    features: ['Vehicle protection', 'Customs clearance', 'Door-to-door', 'Insurance included'],
+    backgroundImage: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   }
 ]
 
@@ -140,9 +144,16 @@ export function TransportPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                className="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
               >
-                <div className="p-8">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                  style={{ backgroundImage: `url(${method.backgroundImage})` }}
+                />
+                
+                {/* Content Overlay */}
+                <div className="relative p-8 bg-white/95 backdrop-blur-sm">
                   <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                     <method.icon className="h-8 w-8 text-primary" />
                   </div>
@@ -194,7 +205,7 @@ export function TransportPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="h-8 w-8 text-primary" />

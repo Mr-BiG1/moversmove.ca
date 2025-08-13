@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone Number',
-    content: '+1 (416) 555-0123',
+            content: '+1 (249) 979-2307',
     description: 'Available 24/7 for urgent inquiries'
   },
   {
@@ -271,7 +271,7 @@ export function ContactPageContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center space-x-3 text-2xl font-bold">
                 <Phone className="h-8 w-8" />
-                <span>+1 (416) 555-0123</span>
+                <span>+1 (249) 979-2307</span>
               </div>
               <div className="flex items-center space-x-3 text-lg">
                 <Clock className="h-6 w-6" />
