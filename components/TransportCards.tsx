@@ -11,7 +11,7 @@ const transportMethods = [
     description: 'Flexible and cost-effective sea freight solutions',
     href: '/transport/sea-freight',
     icon: Ship,
-    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://res.cloudinary.com/dflabr49y/image/upload/v1755112588/image_about_01_yxge5q.jpg',
     features: ['Container shipping', 'Bulk cargo', 'International routes', 'Cost-effective']
   },
   {
@@ -27,7 +27,7 @@ const transportMethods = [
     description: 'Overland logistics and cross-border',
     href: '/transport/road-freight',
     icon: Truck,
-    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://res.cloudinary.com/dflabr49y/image/upload/v1755116842/photo-1738868198588-c0cd34191917_bqspiv.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     features: ['Cross-border', 'LTL & FTL', 'Real-time tracking', 'Flexible scheduling']
   },
   {
@@ -35,7 +35,7 @@ const transportMethods = [
     description: 'International auto transport with documentation',
     href: '/transport/automotive-shipping',
     icon: Car,
-    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://res.cloudinary.com/dflabr49y/image/upload/v1755117898/photo-1651988670871-c1aa882727e5_h1aqu1.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     features: ['Vehicle protection', 'Customs clearance', 'Door-to-door', 'Insurance included']
   }
 ]
