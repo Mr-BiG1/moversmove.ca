@@ -8,17 +8,11 @@ import {
   Phone,
   Mail,
   MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
   Truck,
   Shield,
   Clock,
   Users
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { COMPANY_INFO } from '@/lib/constants'
 
 const quickLinks = [
@@ -53,14 +47,6 @@ const trustFeatures = [
 ]
 
 export function Footer() {
-  const [email, setEmail] = useState('')
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Newsletter signup logic would go here
-    console.log('Newsletter signup:', email)
-    setEmail('')
-  }
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -168,66 +154,21 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Contact & Newsletter */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold border-b border-gray-700 pb-2">Contact Info</h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-accent" />
-                  <span className="text-sm text-gray-300">{COMPANY_INFO.phone}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-accent" />
-                  <span className="text-sm text-gray-300">{COMPANY_INFO.email}</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-accent mt-0.5" />
-                  <span className="text-sm text-gray-300">{COMPANY_INFO.address}</span>
-                </div>
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold border-b border-gray-700 pb-2">Contact Info</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-accent" />
+                <span className="text-sm text-gray-300">{COMPANY_INFO.phone}</span>
               </div>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold border-b border-gray-700 pb-2">Newsletter</h3>
-              <p className="text-sm text-gray-300">
-                Stay updated with our latest services and special offers.
-              </p>
-              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
-                  required
-                />
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
-                >
-                  Subscribe
-                </Button>
-              </form>
-            </div>
-
-            {/* Social Media */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold border-b border-gray-700 pb-2">Follow Us</h3>
-              <div className="flex space-x-4">
-                <Link href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-accent transition-colors">
-                  <Facebook className="h-5 w-5" />
-                </Link>
-                <Link href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-accent transition-colors">
-                  <Twitter className="h-5 w-5" />
-                </Link>
-                <Link href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-accent transition-colors">
-                  <Instagram className="h-5 w-5" />
-                </Link>
-                <Link href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-accent transition-colors">
-                  <Linkedin className="h-5 w-5" />
-                </Link>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-accent" />
+                <span className="text-sm text-gray-300">{COMPANY_INFO.email}</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-accent mt-0.5" />
+                <span className="text-sm text-gray-300">{COMPANY_INFO.address}</span>
               </div>
             </div>
           </div>

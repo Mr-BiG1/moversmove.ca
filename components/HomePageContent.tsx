@@ -8,7 +8,6 @@ import {
   Shield, 
   Clock, 
   Users, 
-  CheckCircle, 
   ArrowRight,
   MapPin,
   Phone,
@@ -63,26 +62,7 @@ const howItWorks = [
   }
 ]
 
-const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    location: 'Toronto, ON',
-    text: 'Movers Move made our international relocation seamless. Professional, punctual, and caring team.',
-    rating: 5
-  },
-  {
-    name: 'Michael Chen',
-    location: 'Vancouver, BC',
-    text: 'Excellent service for our office move. Minimal downtime and everything arrived safely.',
-    rating: 5
-  },
-  {
-    name: 'Emily Rodriguez',
-    location: 'Montreal, QC',
-    text: 'The team handled our piano move with incredible care. Highly recommended!',
-    rating: 5
-  }
-]
+
 
 export function HomePageContent() {
   return (
@@ -256,49 +236,7 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from our satisfied customers
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-lg"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <CheckCircle key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
-                <div>
-                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-500">{testimonial.location}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <CtaQuote />
