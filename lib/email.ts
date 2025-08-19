@@ -18,7 +18,7 @@ const emailConfig = {
     },
   },
   from: process.env.SMTP_FROM || 'Movers Move <no-reply@moversmove.ca>',
-  to: process.env.EMAIL_TO || 'mail@moversmove.ca',
+  to: process.env.EMAIL_TO || 'info@moversmove.ca',
   resendApiKey: process.env.RESEND_API_KEY,
 };
 
@@ -62,7 +62,7 @@ const createEmailTemplate = (subject: string, content: string) => {
       </div>
       <div class="footer">
         <p>© 2024 Movers Move. All rights reserved.</p>
-        <p>123 Moving Way, Toronto, ON M5V 2H1 | <a href="mailto:mail@moversmove.ca">mail@moversmove.ca</a></p>
+        <p>123 Moving Way, Toronto, ON M5V 2H1 | <a href="mailto:info@moversmove.ca">info@moversmove.ca</a></p>
       </div>
     </body>
     </html>

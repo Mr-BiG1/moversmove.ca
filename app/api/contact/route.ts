@@ -76,7 +76,7 @@ This message was sent from the contact form on moversmove.ca
 
     // Send email
     const emailResult = await sendEmail(
-      process.env.EMAIL_TO || 'mail@moversmove.ca',
+      process.env.EMAIL_TO || 'info@moversmove.ca',
       subject,
       htmlContent,
       textContent

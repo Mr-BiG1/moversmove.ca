@@ -81,7 +81,7 @@ A production-ready website for MoversMove, a Canadian logistics and moving compa
    RESEND_API_KEY=your-resend-api-key
    
    # Email Recipients
-   EMAIL_TO=mail@moversmove.ca
+   EMAIL_TO=info@moversmove.ca
    
    # Security - Cloudflare Turnstile
    TURNSTILE_SITE_KEY=your-turnstile-site-key
@@ -274,7 +274,7 @@ This project is licensed under the MIT License.
 ## 🆘 Support
 
 For support or questions:
-- Email: mail@moversmove.ca
+- Email: info@moversmove.ca
 - Create an issue in the repository
 
 ## 🚀 Quick Start Checklist

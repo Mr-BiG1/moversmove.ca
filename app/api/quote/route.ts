@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
 
     // Send email
     const emailResult = await sendEmail(
-      process.env.EMAIL_TO || 'mail@moversmove.ca',
+      process.env.EMAIL_TO || 'info@moversmove.ca',
       `New Quote Request - ${data.serviceType}`,
       html,
       text

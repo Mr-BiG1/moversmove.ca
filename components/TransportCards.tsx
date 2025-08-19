@@ -54,7 +54,7 @@ export function TransportCards() {
           className="group relative"
         >
           <Link href={method.href}>
-            <div className="relative h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border border-white/20 backdrop-blur-sm hover:shadow-2xl transition-all duration-500">
+            <div className="relative min-h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border border-white/20 backdrop-blur-sm hover:shadow-2xl transition-all duration-500">
               {/* Background Image */}
               <div className="absolute inset-0">
                 <Image
@@ -63,13 +63,13 @@ export function TransportCards() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/40"></div>
               </div>
 
               {/* Content */}
-              <div className="relative h-full flex flex-col justify-between p-6 text-white">
+              <div className="relative h-full flex flex-col p-6 text-white">
                 {/* Top Section */}
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
                     <method.icon className="h-6 w-6" />
                   </div>
@@ -78,11 +78,11 @@ export function TransportCards() {
                   </div>
                 </div>
 
-                {/* Bottom Section */}
-                <div className="space-y-4">
+                {/* Middle Section */}
+                <div className="flex-1 space-y-4">
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{method.title}</h3>
-                    <p className="text-white/80 text-sm leading-relaxed">
+                    <h3 className="text-xl font-bold mb-2 text-white drop-shadow-lg">{method.title}</h3>
+                    <p className="text-white/95 text-sm leading-relaxed drop-shadow-md">
                       {method.description}
                     </p>
                   </div>
@@ -98,18 +98,18 @@ export function TransportCards() {
                         viewport={{ once: true }}
                         className="flex items-center space-x-2 text-sm"
                       >
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                        <span className="text-white/70">{feature}</span>
+                        <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></div>
+                        <span className="text-white/90 drop-shadow-sm">{feature}</span>
                       </motion.div>
                     ))}
                   </div>
+                </div>
 
-                  {/* CTA */}
-                  <div className="pt-4">
-                    <div className="inline-flex items-center space-x-2 text-accent font-semibold text-sm group-hover:translate-x-1 transition-transform duration-300">
-                      <span>Learn More</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </div>
+                {/* CTA - Always visible at bottom */}
+                <div className="mt-6 pt-4 border-t border-white/20">
+                  <div className="inline-flex items-center space-x-2 bg-accent/90 backdrop-blur-sm px-4 py-3 rounded-lg text-white font-semibold text-sm group-hover:translate-x-1 transition-all duration-300 group-hover:bg-accent shadow-lg">
+                    <span>Learn More</span>
+                    <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>
               </div>

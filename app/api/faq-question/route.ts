@@ -71,7 +71,7 @@ This question was submitted from the FAQ page on moversmove.ca
 
     // Send email
     const emailResult = await sendEmail(
-      process.env.EMAIL_TO || 'mail@moversmove.ca',
+      process.env.EMAIL_TO || 'info@moversmove.ca',
       subject,
       htmlContent,
       textContent

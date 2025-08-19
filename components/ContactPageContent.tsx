@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Address',
-    content: 'mail@moversmove.ca',
+    content: 'info@moversmove.ca',
     description: 'We respond within 2 hours'
   },
   {
