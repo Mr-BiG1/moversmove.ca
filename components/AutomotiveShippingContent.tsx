@@ -232,11 +232,7 @@ export function AutomotiveShippingContent() {
       {/* Time Estimator */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <TimeEstimator 
-            method="automotive-shipping"
-            title="Automotive Shipping Transit Times"
-            description="Get estimated delivery times for automotive shipments worldwide"
-          />
+          <TimeEstimator defaultMethod="automotive-shipping" />
         </div>
       </section>
 

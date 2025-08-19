@@ -232,11 +232,7 @@ export function RoadFreightContent() {
       {/* Time Estimator */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <TimeEstimator 
-            method="road-freight"
-            title="Road Freight Transit Times"
-            description="Get estimated delivery times for road freight shipments across North America"
-          />
+          <TimeEstimator defaultMethod="road-freight" />
         </div>
       </section>
 
