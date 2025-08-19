@@ -22,7 +22,7 @@ const transportMethods = [
     icon: Ship,
     href: '/transport/sea-freight',
     features: ['Container shipping', 'Bulk cargo', 'International routes', 'Cost-effective'],
-    backgroundImage: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    backgroundImage: 'https://res.cloudinary.com/dflabr49y/image/upload/v1755112588/image_about_01_yxge5q.jpg'
   },
   {
     title: 'Air Freight',
@@ -30,7 +30,7 @@ const transportMethods = [
     icon: Plane,
     href: '/transport/air-freight',
     features: ['Express delivery', 'Global network', 'Priority handling', 'Fast transit'],
-    backgroundImage: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    backgroundImage: 'https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
   },
   {
     title: 'Road Freight',
@@ -38,7 +38,7 @@ const transportMethods = [
     icon: Truck,
     href: '/transport/road-freight',
     features: ['Cross-border', 'LTL & FTL', 'Real-time tracking', 'Flexible scheduling'],
-    backgroundImage: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    backgroundImage: 'https://res.cloudinary.com/dflabr49y/image/upload/v1755116842/photo-1738868198588-c0cd34191917_bqspiv.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
   },
   {
     title: 'Automotive Shipping',
@@ -46,7 +46,7 @@ const transportMethods = [
     icon: Car,
     href: '/transport/automotive-shipping',
     features: ['Vehicle protection', 'Customs clearance', 'Door-to-door', 'Insurance included'],
-    backgroundImage: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    backgroundImage: 'https://res.cloudinary.com/dflabr49y/image/upload/v1755117898/photo-1651988670871-c1aa882727e5_h1aqu1.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
   }
 ]
 

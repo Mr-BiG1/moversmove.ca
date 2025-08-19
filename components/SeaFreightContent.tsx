@@ -50,7 +50,7 @@ export function SeaFreightContent() {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src="https://res.cloudinary.com/dflabr49y/image/upload/v1755112588/image_about_01_yxge5q.jpg"
             alt="Sea freight shipping"
             fill
             className="object-cover opacity-30"
