@@ -15,8 +15,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Office Address',
-    content: '123 Moving Way, Toronto, ON M5V 3A8',
-    description: 'Main office in downtown Toronto'
+    content: '2 County Court Blvd, Unit 333, Brampton, ON',
+    description: 'Main office in Brampton, serving GTA'
   },
   {
     icon: Phone,

@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import { QuoteForm } from '@/components/forms/QuoteForm'
 
 export const metadata: Metadata = {
-  title: 'Get a Free Quote - Professional Moving Services',
-  description: 'Request a free, no-obligation quote for your move. Our experts will provide you with a customized moving plan and competitive pricing.',
+  title: 'Free Moving Quote',
+  description: 'Request a free, no-obligation quote. Transparent pricing.',
   openGraph: {
-    title: 'Get a Free Quote - Professional Moving Services',
-    description: 'Request a free, no-obligation quote for your move.',
+    title: 'Free Moving Quote',
+    description: 'Request a free, no-obligation quote. Transparent pricing.',
   },
 }
 

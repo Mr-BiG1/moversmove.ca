@@ -77,12 +77,12 @@ export const TRANSPORT_METHODS = [
 
 // Company information
 export const COMPANY_INFO = {
-  name: 'Movers Move',
+  name: 'Movers Move Freight & Logistics',
   domain: 'moversmove.ca',
   email: 'info@moversmove.ca',
   phone: '+1 (249) 979-2307',
-  address: '123 Moving Way, Toronto, ON M5V 2H1',
-  description: 'Professional Canadian logistics and moving company providing comprehensive moving services across Canada and internationally.',
+  address: '2 County Court Blvd, Unit 333, Brampton, ON',
+  description: 'Professional moving, freight and logistics services across Canada. Brampton & GTA specialists. Get a free quote.',
 } as const;
 
 // Trust badges

@@ -2,14 +2,36 @@ import { Metadata } from 'next'
 import { AirFreightContent } from '@/components/AirFreightContent'
 
 export const metadata: Metadata = {
-  title: 'Air Freight Services - Worldwide Air Freight Solutions | Movers Move',
-  description: 'Worldwide Air Freight services with express delivery, global coverage, priority handling, and fast transit times.',
+  title: 'Air Freight Services Canada',
+  description: 'Fast international shipping, priority handling & customs. Door-to-door options.',
   openGraph: {
-    title: 'Air Freight Services - Worldwide Air Freight Solutions | Movers Move',
-    description: 'Worldwide Air Freight services with express delivery and global coverage.',
+    title: 'Air Freight Services Canada',
+    description: 'Fast international shipping, priority handling & customs. Door-to-door options.',
   },
 }
 
 export default function AirFreightPage() {
-  return <AirFreightContent />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Air Freight",
+            "provider": {
+              "@type": "Organization",
+              "name": "Movers Move Freight & Logistics",
+              "url": "https://moversmove.ca"
+            },
+            "areaServed": "Worldwide",
+            "brand": "Movers Move",
+            "description": "Fast international shipping, priority handling and customs clearance with door-to-door options."
+          })
+        }}
+      />
+      <AirFreightContent />
+    </>
+  )
 }

@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import { ContactPageContent } from '@/components/ContactPageContent'
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Get in Touch | Movers Move',
-  description: 'Contact Movers Move for professional moving services. Get in touch for quotes, questions, or support. We\'re here to help with your moving needs.',
+  title: 'Contact Movers Move',
+  description: 'Call +1 (249) 979‑2307 or email info@moversmove.ca. Office: 2 County Court Blvd, Unit 333, Brampton, ON.',
   openGraph: {
-    title: 'Contact Us - Get in Touch | Movers Move',
-    description: 'Contact Movers Move for professional moving services and support.',
+    title: 'Contact Movers Move',
+    description: 'Call +1 (249) 979‑2307 or email info@moversmove.ca. Office: 2 County Court Blvd, Unit 333, Brampton, ON.',
   },
 }
 

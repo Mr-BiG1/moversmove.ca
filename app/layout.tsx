@@ -11,11 +11,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://moversmove.ca'),
   title: {
-    default: `${COMPANY_INFO.name} - Professional Canadian Logistics & Moving Services`,
-    template: `%s | ${COMPANY_INFO.name}`
+    default: 'Movers Move Freight & Logistics',
+    template: '%s | Movers Move'
   },
-  description: COMPANY_INFO.description,
+  description: 'Professional moving, freight and logistics services across Canada. Brampton & GTA specialists. Get a free quote.',
   keywords: [
     'moving services',
     'logistics',
@@ -25,8 +26,13 @@ export const metadata: Metadata = {
     'international shipping',
     'local moves',
     'storage solutions',
-    'Toronto moving',
-    'GTA moving services'
+    'Brampton moving',
+    'GTA moving services',
+    'freight services',
+    'road freight',
+    'air freight',
+    'sea freight',
+    'automotive shipping'
   ],
   authors: [{ name: COMPANY_INFO.name }],
   creator: COMPANY_INFO.name,
@@ -36,17 +42,15 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.SITE_URL || 'https://moversmove.ca'),
-  alternates: {
-    canonical: '/',
+  alternates: { 
+    canonical: 'https://moversmove.ca' 
   },
   openGraph: {
     type: 'website',
-    locale: 'en_CA',
-    url: '/',
-    title: `${COMPANY_INFO.name} - Professional Canadian Logistics & Moving Services`,
-    description: COMPANY_INFO.description,
-    siteName: COMPANY_INFO.name,
+    siteName: 'Movers Move',
+    url: 'https://moversmove.ca',
+    title: 'Movers Move Freight & Logistics',
+    description: 'Professional moving, freight and logistics services across Canada.',
     images: [
       {
         url: '/og-image.jpg',
@@ -58,9 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${COMPANY_INFO.name} - Professional Canadian Logistics & Moving Services`,
-    description: COMPANY_INFO.description,
-    images: ['/og-image.jpg'],
+    title: 'Movers Move Freight & Logistics',
+    description: 'Professional moving, freight and logistics services across Canada.'
   },
   robots: {
     index: true,
@@ -91,6 +94,37 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0A5DB5" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* LocalBusiness Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MovingCompany",
+              "name": "Movers Move Freight & Logistics",
+              "url": "https://moversmove.ca",
+              "telephone": "+1-249-979-2307",
+              "email": "info@moversmove.ca",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "2 County Court Blvd, Unit 333",
+                "addressLocality": "Brampton",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+              },
+              "areaServed": ["Brampton", "GTA", "Ontario", "Canada"],
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "08:00",
+                  "closes": "18:00"
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body className={`${inter.className} antialiased`}>
         <div className="flex min-h-screen flex-col">

@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import { AboutPageContent } from '@/components/AboutPageContent'
 
 export const metadata: Metadata = {
-  title: 'About Us - Professional Canadian Moving & Logistics Company | Movers Move',
-  description: 'Learn about Movers Move, a trusted Canadian moving and logistics company with 15+ years of experience in local, national, and international relocations.',
+  title: 'About Movers Move',
+  description: 'Brampton logistics & moving company with 15+ years experience and 50,000+ successful moves.',
   openGraph: {
-    title: 'About Us - Professional Canadian Moving & Logistics Company | Movers Move',
-    description: 'Learn about Movers Move, a trusted Canadian moving and logistics company with 15+ years of experience.',
+    title: 'About Movers Move',
+    description: 'Brampton logistics & moving company with 15+ years experience and 50,000+ successful moves.',
   },
 }
 

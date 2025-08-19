@@ -2,14 +2,53 @@ import { Metadata } from 'next'
 import { FaqsPageContent } from '@/components/FaqsPageContent'
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions - Moving Services FAQ | Movers Move',
-  description: 'Find answers to common questions about our moving services, pricing, insurance, and more. Can\'t find your answer? Ask us directly!',
+  title: 'FAQs',
+  description: 'Answers about pricing, service areas, estimates, and process.',
   openGraph: {
-    title: 'Frequently Asked Questions - Moving Services FAQ | Movers Move',
-    description: 'Find answers to common questions about our moving services, pricing, insurance, and more.',
+    title: 'FAQs',
+    description: 'Answers about pricing, service areas, estimates, and process.',
   },
 }
 
 export default function FaqsPage() {
-  return <FaqsPageContent />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do you provide free estimates?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, we offer free, no-obligation estimates for all moving and freight services."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What areas do you serve?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We serve Brampton, GTA, Ontario and offer Canada-wide and cross-border services."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are you licensed and insured?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, all services are fully insured and we operate with licensed professionals."
+                }
+              }
+            ]
+          })
+        }}
+      />
+      <FaqsPageContent />
+    </>
+  )
 }

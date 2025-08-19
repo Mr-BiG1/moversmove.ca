@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import { HomePageContent } from '@/components/HomePageContent'
 
 export const metadata: Metadata = {
-  title: 'Professional Canadian Logistics & Moving Services',
-  description: 'Movers Move provides comprehensive moving services across Canada and internationally. Local moves, international shipping, residential and commercial relocations with 15+ years of experience.',
+  title: 'Movers Move Freight & Logistics',
+  description: 'Professional moving, freight & logistics across Canada. Brampton & GTA specialists. Get a free quote.',
   openGraph: {
-    title: 'Professional Canadian Logistics & Moving Services',
-    description: 'Movers Move provides comprehensive moving services across Canada and internationally.',
+    title: 'Movers Move Freight & Logistics',
+    description: 'Professional moving, freight & logistics across Canada. Brampton & GTA specialists. Get a free quote.',
   },
 }
 

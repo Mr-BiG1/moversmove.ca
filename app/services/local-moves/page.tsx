@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import { LocalMovesContent } from '@/components/LocalMovesContent'
 
 export const metadata: Metadata = {
-  title: 'Local Moves - Professional Local Moving Services | Movers Move',
-  description: 'Professional local moving services within the GTA and surrounding areas. Same-day service, professional packing, furniture protection, and local expertise.',
+  title: 'Local Moving Services in Brampton & GTA',
+  description: 'Same-day local movers with packing & furniture protection.',
   openGraph: {
-    title: 'Local Moves - Professional Local Moving Services | Movers Move',
-    description: 'Professional local moving services within the GTA and surrounding areas.',
+    title: 'Local Moving Services in Brampton & GTA',
+    description: 'Same-day local movers with packing & furniture protection.',
   },
 }
 
