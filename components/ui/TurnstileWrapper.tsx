@@ -68,6 +68,8 @@ export function TurnstileWrapper({
       onError={onError}
       theme={theme}
       className={className}
+      refreshExpired="auto"
+      language="auto"
     />
   )
 }

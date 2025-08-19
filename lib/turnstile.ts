@@ -22,6 +22,7 @@ export async function verifyTurnstile(token: string): Promise<TurnstileResponse>
 
     // Validate token format
     if (!token || token.length < 10) {
+      console.warn('Turnstile token validation failed: token too short or missing');
       return { 
         success: false, 
         error: 'Invalid token format' 
@@ -36,7 +37,6 @@ export async function verifyTurnstile(token: string): Promise<TurnstileResponse>
       body: JSON.stringify({
         secret: process.env.TURNSTILE_SECRET_KEY,
         response: token,
-        remoteip: process.env.NODE_ENV === 'production' ? undefined : '127.0.0.1',
       }),
     });
 

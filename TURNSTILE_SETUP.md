@@ -65,6 +65,16 @@ In development mode, if Turnstile is not configured:
 - Check browser console for JavaScript errors
 - Verify your domain is added to Turnstile in Cloudflare
 
+**"Private Access Token challenge" errors**
+- This usually means Turnstile is working but there's a configuration issue
+- Check that both site key and secret key are correct
+- Ensure your domain is properly configured in Cloudflare Turnstile
+- Try clearing browser cache and cookies
+
+**Preload warnings in console**
+- These are normal Cloudflare challenge warnings and can be ignored
+- They don't affect functionality
+
 ### Testing Without Turnstile
 For development/testing without Turnstile:
 1. Set a dummy value for `NEXT_PUBLIC_TURNSTILE_SITE_KEY`
@@ -95,3 +105,4 @@ If you encounter issues:
 2. Check server logs for server-side errors
 3. Verify your Turnstile configuration in Cloudflare
 4. Ensure all environment variables are set correctly
+5. Try the development bypass mode for testing
