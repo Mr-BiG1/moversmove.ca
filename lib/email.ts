@@ -118,16 +118,16 @@ export const createContactEmail = (data: {
   email: string;
   address: string;
   inquiry: string;
+  pageSource: string;
 }) => {
   const subject = 'New Contact Form Submission';
   const content = `
-    <h2>New Contact Form Submission</h2>
+    <h2>Contact Form Submission</h2>
     <div class="highlight">
-      <strong>From:</strong> ${data.name} (${data.email})
+      <strong>From:</strong> ${data.name} (${data.email})<br>
+      <strong>Address:</strong> ${data.address}<br>
+      <strong>Page Source:</strong> ${data.pageSource}
     </div>
-    
-    <h3>Contact Information</h3>
-    <p><strong>Address:</strong> ${data.address}</p>
     
     <h3>Inquiry</h3>
     <p>${data.inquiry}</p>
@@ -143,12 +143,14 @@ export const createFaqEmail = (data: {
   name: string;
   email: string;
   question: string;
+  pageSource: string;
 }) => {
   const subject = 'FAQ Question from Website';
   const content = `
     <h2>FAQ Question</h2>
     <div class="highlight">
-      <strong>From:</strong> ${data.name} (${data.email})
+      <strong>From:</strong> ${data.name} (${data.email})<br>
+      <strong>Page Source:</strong> ${data.pageSource}
     </div>
     
     <h3>Question</h3>

@@ -36,23 +36,28 @@ export function ContactForm() {
     setSubmitStatus('idle')
 
     try {
-      const response = await fetch('/api/contact', {
+      const formData = new FormData()
+      formData.append('name', data.name)
+      formData.append('email', data.email)
+      formData.append('address', data.address)
+      formData.append('inquiry', data.inquiry)
+      formData.append('turnstileToken', turnstileToken)
+      formData.append('pageSource', '/contact')
+      formData.append('formType', 'contact')
+
+      const response = await fetch('/api/email', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...data,
-          turnstileToken,
-          pageSource: '/contact'
-        }),
+        body: formData,
       })
 
-      if (response.ok) {
+      const result = await response.json()
+
+      if (response.ok && result.success) {
         setSubmitStatus('success')
         reset()
         setTurnstileToken(null)
       } else {
+        console.error('Contact submission failed:', result.error)
         setSubmitStatus('error')
       }
     } catch (error) {
