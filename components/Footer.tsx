@@ -37,6 +37,7 @@ const companyLinks = [
   { name: 'FAQs', href: '/faqs' },
   { name: 'Payment Calculator', href: '/payment-calculator' },
   { name: 'Get a Quote', href: '/quote' },
+  { name: 'Track Shipment', href: '/track-shipment' },
 ]
 
 const trustFeatures = [

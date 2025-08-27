@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { StickyCallButton } from '@/components/StickyCallButton'
 import { COMPANY_INFO } from '@/lib/constants'
 
 const inter = Inter({ 
@@ -16,23 +17,26 @@ export const metadata: Metadata = {
     default: 'Movers Move Freight & Logistics',
     template: '%s | Movers Move'
   },
-  description: 'Professional moving, freight and logistics services across Canada. Brampton & GTA specialists. Get a free quote.',
+  description: 'World-wide freight and logistics solutions. Professional moving, freight and logistics services across Canada. Brampton & GTA specialists. Get a free quote.',
   keywords: [
-    'moving services',
+    'freight services',
     'logistics',
-    'Canadian moving company',
+    'world-wide shipping',
+    'Canadian freight company',
+    'international logistics',
+    'sea freight',
+    'air freight',
+    'road freight',
+    'automotive shipping',
+    'moving services',
     'residential moves',
     'commercial moves',
-    'international shipping',
-    'local moves',
     'storage solutions',
-    'Brampton moving',
-    'GTA moving services',
-    'freight services',
-    'road freight',
-    'air freight',
-    'sea freight',
-    'automotive shipping'
+    'Brampton freight',
+    'GTA logistics services',
+    'Canada freight services',
+    'international logistics company',
+    'professional moving and freight solutions'
   ],
   authors: [{ name: COMPANY_INFO.name }],
   creator: COMPANY_INFO.name,
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
     siteName: 'Movers Move',
     url: 'https://moversmove.ca',
     title: 'Movers Move Freight & Logistics',
-    description: 'Professional moving, freight and logistics services across Canada.',
+    description: 'World-wide freight and logistics solutions. Professional moving, freight and logistics services across Canada.',
     images: [
       {
         url: '/og-image.jpg',
@@ -63,7 +67,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Movers Move Freight & Logistics',
-    description: 'Professional moving, freight and logistics services across Canada.'
+    description: 'World-wide freight and logistics solutions. Professional moving, freight and logistics services across Canada.'
   },
   robots: {
     index: true,
@@ -133,6 +137,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <StickyCallButton />
         </div>
       </body>
     </html>

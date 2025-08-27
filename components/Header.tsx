@@ -198,6 +198,9 @@ export function Header() {
             <Link href="/faqs" className="text-gray-700 hover:text-primary transition-colors font-medium">
               FAQs
             </Link>
+            <Link href="/track-shipment" className="text-gray-700 hover:text-primary transition-colors font-medium">
+              Track Shipment
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -212,6 +215,16 @@ export function Header() {
                 Get a Free Quote
               </Button>
             </Link>
+          </div>
+
+          {/* Mobile Call Button */}
+          <div className="lg:hidden flex items-center space-x-2">
+            <a
+              href="tel:+12499792307"
+              className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-lg"
+            >
+              Call Now
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -295,6 +308,13 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 FAQs
+              </Link>
+              <Link
+                href="/track-shipment"
+                className="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Track Shipment
               </Link>
 
               <div className="pt-4 space-y-3">

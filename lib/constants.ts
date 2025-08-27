@@ -82,7 +82,7 @@ export const COMPANY_INFO = {
   email: 'info@moversmove.ca',
   phone: '+1 (249) 979-2307',
   address: '2 County Court Blvd, Unit 333, Brampton, ON',
-  description: 'Professional moving, freight and logistics services across Canada. Brampton & GTA specialists. Get a free quote.',
+  description: 'World-wide freight and logistics solutions. Professional moving, freight and logistics services across Canada. Brampton & GTA specialists. Get a free quote.',
 } as const;
 
 // Trust badges

@@ -50,8 +50,8 @@ export function TransportCards() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: index * 0.1 }}
           viewport={{ once: true }}
-          whileHover={{ y: -10 }}
-          className="group relative"
+          whileHover={{ y: -10, scale: 1.05 }}
+          className="group relative cursor-pointer"
         >
           <Link href={method.href}>
             <div className="relative min-h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border border-white/20 backdrop-blur-sm hover:shadow-2xl transition-all duration-500">
@@ -108,7 +108,7 @@ export function TransportCards() {
                 {/* CTA - Always visible at bottom */}
                 <div className="mt-6 pt-4 border-t border-white/20">
                   <div className="inline-flex items-center space-x-2 bg-accent/90 backdrop-blur-sm px-4 py-3 rounded-lg text-white font-semibold text-sm group-hover:translate-x-1 transition-all duration-300 group-hover:bg-accent shadow-lg">
-                    <span>Learn More</span>
+                    <span>Explore More</span>
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>
