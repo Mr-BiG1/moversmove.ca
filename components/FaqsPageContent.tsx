@@ -171,9 +171,8 @@ export function FaqsPageContent() {
       formData.append('question', data.question)
       formData.append('turnstileToken', turnstileToken)
       formData.append('pageSource', '/faqs')
-      formData.append('formType', 'faq')
 
-      const response = await fetch('/api/email', {
+      const response = await fetch('/api/faq-question', {
         method: 'POST',
         body: formData,
       })

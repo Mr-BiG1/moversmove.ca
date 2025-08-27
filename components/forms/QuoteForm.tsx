@@ -60,9 +60,7 @@ export function QuoteForm() {
       formData.append('turnstileToken', turnstileToken)
       formData.append('pageSource', '/quote')
 
-      formData.append('formType', 'quote')
-      
-      const response = await fetch('/api/email', {
+      const response = await fetch('/api/quote', {
         method: 'POST',
         body: formData,
       })

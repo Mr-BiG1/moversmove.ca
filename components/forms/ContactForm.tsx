@@ -43,9 +43,8 @@ export function ContactForm() {
       formData.append('inquiry', data.inquiry)
       formData.append('turnstileToken', turnstileToken)
       formData.append('pageSource', '/contact')
-      formData.append('formType', 'contact')
 
-      const response = await fetch('/api/email', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         body: formData,
       })
