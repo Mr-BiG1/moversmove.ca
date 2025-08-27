@@ -127,7 +127,7 @@ moversmove-website/
 ├── app/                    # Next.js App Router pages
 │   ├── api/               # API routes
 │   ├── quote/             # Quote form page
-│   ├── payment-calculator/ # Cost calculator page
+
 │   ├── transport/         # Transport method pages
 │   └── layout.tsx         # Root layout
 ├── components/            # React components

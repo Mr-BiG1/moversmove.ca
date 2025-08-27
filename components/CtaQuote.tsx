@@ -28,7 +28,7 @@ export function CtaQuote() {
               Ready to Move?
             </h2>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Get your free, no-obligation quote today and experience the difference that professional moving services make.
+              Get your free, no-obligation quote today and experience the difference that professional logistics services make.
             </p>
           </motion.div>
 
@@ -48,15 +48,6 @@ export function CtaQuote() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/payment-calculator">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-primary font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300"
-              >
-                Price Calculator
-              </Button>
-            </Link>
           </motion.div>
 
           <motion.div
@@ -66,7 +57,7 @@ export function CtaQuote() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            <div className="flex flex-col items-center space-y-3">
+            <a href="tel:+12499792307" className="flex flex-col items-center space-y-3 hover:scale-105 transition-transform cursor-pointer">
               <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
                 <Phone className="h-8 w-8" />
               </div>
@@ -74,9 +65,9 @@ export function CtaQuote() {
                 <h3 className="text-lg font-semibold mb-1">Call Us</h3>
                 <p className="text-white/80">Speak with our experts</p>
               </div>
-            </div>
+            </a>
 
-            <div className="flex flex-col items-center space-y-3">
+            <a href="mailto:info@moversmove.ca" className="flex flex-col items-center space-y-3 hover:scale-105 transition-transform cursor-pointer">
               <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
                 <Mail className="h-8 w-8" />
               </div>
@@ -84,7 +75,7 @@ export function CtaQuote() {
                 <h3 className="text-lg font-semibold mb-1">Email Us</h3>
                 <p className="text-white/80">Get detailed information</p>
               </div>
-            </div>
+            </a>
 
             <div className="flex flex-col items-center space-y-3">
               <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">

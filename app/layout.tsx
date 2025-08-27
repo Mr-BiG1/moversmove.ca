@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: 'Movers Move Freight & Logistics',
     template: '%s | Movers Move'
   },
-  description: 'World-wide freight and logistics solutions. Professional moving, freight and logistics services across Canada. Brampton & GTA specialists. Get a free quote.',
+  description: 'World-wide freight and logistics solutions. Professional logistics, freight and logistics services across the globe. Brampton & GTA specialists. Get a free quote.',
   keywords: [
     'freight services',
     'logistics',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'air freight',
     'road freight',
     'automotive shipping',
-    'moving services',
+    'logistics services',
     'residential moves',
     'commercial moves',
     'storage solutions',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: 'Movers Move',
     url: 'https://moversmove.ca',
     title: 'Movers Move Freight & Logistics',
-    description: 'World-wide freight and logistics solutions. Professional moving, freight and logistics services across Canada.',
+    description: 'World-wide freight and logistics solutions. Professional logistics, freight and logistics services across the globe.',
     images: [
       {
         url: '/og-image.jpg',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Movers Move Freight & Logistics',
-    description: 'World-wide freight and logistics solutions. Professional moving, freight and logistics services across Canada.'
+    description: 'World-wide freight and logistics solutions. Professional logistics, freight and logistics services across the globe.'
   },
   robots: {
     index: true,

@@ -35,7 +35,6 @@ const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Contact', href: '/contact' },
   { name: 'FAQs', href: '/faqs' },
-  { name: 'Payment Calculator', href: '/payment-calculator' },
   { name: 'Get a Quote', href: '/quote' },
   { name: 'Track Shipment', href: '/track-shipment' },
 ]
@@ -77,7 +76,7 @@ export function Footer() {
                   priority
 
                 />
-                <p className="text-sm text-gray-400">Professional Moving Services</p>
+                <p className="text-sm text-gray-400">Professional Logistics Services</p>
               </div>
             </div>
 
@@ -161,11 +160,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent" />
-                <span className="text-sm text-gray-300">{COMPANY_INFO.phone}</span>
+                <a href={`tel:${COMPANY_INFO.phone}`} className="text-sm text-gray-300 hover:text-accent transition-colors">
+                  {COMPANY_INFO.phone}
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent" />
-                <span className="text-sm text-gray-300">{COMPANY_INFO.email}</span>
+                <a href={`mailto:${COMPANY_INFO.email}`} className="text-sm text-gray-300 hover:text-accent transition-colors">
+                  {COMPANY_INFO.email}
+                </a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5" />

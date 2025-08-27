@@ -37,21 +37,7 @@ export const faqQuestionSchema = z.object({
   pageSource: z.string().optional(),
 });
 
-// Payment calculator schema
-export const paymentCalculatorSchema = z.object({
-  moveType: z.enum(['local', 'international']),
-  bedrooms: z.enum(['studio', '1', '2', '3', '4', '5+']),
-  distance: z.number().min(1, 'Distance must be at least 1 km').max(50000, 'Distance must be less than 50,000 km'),
-  loadSize: z.number().min(1, 'Load size must be at least 1 m³').max(1000, 'Load size must be less than 1000 m³'),
-  serviceLevel: z.enum(['basic', 'standard', 'premium']),
-  options: z.object({
-    packing: z.boolean().default(false),
-    unpacking: z.boolean().default(false),
-    storage: z.boolean().default(false),
-    piano: z.boolean().default(false),
-    fineArt: z.boolean().default(false),
-  }),
-});
+
 
 // Time estimator schema
 export const timeEstimatorSchema = z.object({
@@ -69,6 +55,5 @@ export const newsletterSchema = z.object({
 export type ContactFormData = z.infer<typeof contactSchema>;
 export type QuoteFormData = z.infer<typeof quoteSchema>;
 export type FaqQuestionFormData = z.infer<typeof faqQuestionSchema>;
-export type PaymentCalculatorData = z.infer<typeof paymentCalculatorSchema>;
 export type TimeEstimatorData = z.infer<typeof timeEstimatorSchema>;
 export type NewsletterData = z.infer<typeof newsletterSchema>;

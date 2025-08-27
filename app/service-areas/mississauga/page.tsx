@@ -53,7 +53,7 @@ export default function MississaugaPage() {
             Professional Movers in Mississauga
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
-            Trusted local moving services in Mississauga with same-day availability and professional packing.
+            Trusted local logistics services in Mississauga with same-day availability and professional packing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
@@ -71,7 +71,7 @@ export default function MississaugaPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Our Mississauga Moving Services?
+              Why Choose Our Mississauga Logistics Services?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We're your local Mississauga moving experts with years of experience serving the community.
@@ -100,7 +100,7 @@ export default function MississaugaPage() {
               Mississauga Service Areas
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We provide moving services throughout all of Mississauga and surrounding areas.
+              We provide logistics services throughout all of Mississauga and surrounding areas.
             </p>
           </div>
 
@@ -120,19 +120,19 @@ export default function MississaugaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Mississauga Moving Services
+              Mississauga Logistics Services
             </h2>
             
             <div className="prose prose-lg max-w-none">
               <p>
                 As your trusted Mississauga moving company, we understand the unique needs of our local community. 
                 Whether you're moving within Mississauga or to nearby areas like Brampton, Oakville, or Toronto, 
-                our experienced team provides reliable, professional moving services.
+                our experienced team provides reliable, professional logistics services.
               </p>
               
-              <h3>Our Mississauga Moving Services Include:</h3>
+              <h3>Our Mississauga Logistics Services Include:</h3>
               <ul>
-                <li><strong>Residential Moves:</strong> Complete home moving services with professional packing and unpacking</li>
+                <li><strong>Residential Moves:</strong> Complete home logistics services with professional packing and unpacking</li>
                 <li><strong>Commercial Moves:</strong> Office and business relocation throughout Mississauga</li>
                 <li><strong>Same-Day Service:</strong> Quick local moves when you need them most</li>
                 <li><strong>Packing Services:</strong> Professional packing with protective materials</li>
@@ -149,7 +149,7 @@ export default function MississaugaPage() {
 
               <h3>Local Mississauga Landmarks We Serve:</h3>
               <p>
-                We provide moving services near popular Mississauga locations including Square One Shopping Centre, 
+                We provide logistics services near popular Mississauga locations including Square One Shopping Centre, 
                 Mississauga City Hall, Celebration Square, Port Credit Marina, the Living Arts Centre, 
                 and the Mississauga GO Station. No matter where you're moving in Mississauga, we've got you covered.
               </p>

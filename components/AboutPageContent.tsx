@@ -162,7 +162,7 @@ export function AboutPageContent() {
               className="bg-white p-6 rounded-lg shadow-lg"
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Domestic & international freight solutions</h3>
-              <p className="text-gray-600">Reliable shipping across Canada and worldwide with customs clearance and documentation.</p>
+                              <p className="text-gray-600">Reliable shipping across the globe with customs clearance and documentation.</p>
             </motion.div>
             
             <motion.div
@@ -206,7 +206,7 @@ export function AboutPageContent() {
               className="bg-white p-6 rounded-lg shadow-lg"
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Professional packing, loading, and unpacking</h3>
-              <p className="text-gray-600">Complete moving services with experienced crews and quality materials for safe transportation.</p>
+                              <p className="text-gray-600">Complete logistics services with experienced crews and quality materials for safe transportation.</p>
             </motion.div>
           </div>
         </div>

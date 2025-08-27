@@ -74,14 +74,14 @@ export function HomePageContent() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="text-center">
-            <motion.h1 
+                        <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              Professional Moving Services
-              <span className="block text-accent">Across Canada</span>
+              Professional Logistics Services
+              <span className="block text-accent">Across the Globe</span>
             </motion.h1>
             
             <motion.p 
@@ -164,10 +164,10 @@ export function HomePageContent() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Movers Move?
+              Why Choose MoversMove?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the difference with our professional moving services
+              Experience the difference with our professional logistical services
             </p>
           </motion.div>
           
@@ -253,30 +253,34 @@ export function HomePageContent() {
             >
               <MapPin className="h-8 w-8 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Service Areas</h3>
-              <p className="text-primary-100">GTA, Ontario & Across Canada</p>
+              <p className="text-primary-100">GTA, Ontario & Across the Globe</p>
             </motion.div>
             
-            <motion.div
+            <motion.a
+              href={`tel:${COMPANY_INFO.phone}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
+              className="hover:scale-105 transition-transform cursor-pointer"
             >
               <Phone className="h-8 w-8 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Call Us</h3>
               <p className="text-primary-100">{COMPANY_INFO.phone}</p>
-            </motion.div>
+            </motion.a>
             
-            <motion.div
+            <motion.a
+              href={`mailto:${COMPANY_INFO.email}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+              className="hover:scale-105 transition-transform cursor-pointer"
             >
               <Mail className="h-8 w-8 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <p className="text-primary-100">{COMPANY_INFO.email}</p>
-            </motion.div>
+            </motion.a>
           </div>
         </div>
       </section>

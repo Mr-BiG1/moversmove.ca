@@ -26,36 +26,7 @@ export const TRANSPORT_SPEEDS = {
   'automotive-shipping': 25, // Same as sea freight for international
 } as const;
 
-// Price coefficients for payment calculator
-export const PRICE_COEFFICIENTS = {
-  moveType: {
-    local: 1.0,
-    international: 2.5,
-  },
-  bedrooms: {
-    studio: 0.8,
-    '1': 1.0,
-    '2': 1.3,
-    '3': 1.6,
-    '4': 2.0,
-    '5+': 2.5,
-  },
-  serviceLevel: {
-    basic: 1.0,
-    standard: 1.3,
-    premium: 1.8,
-  },
-  options: {
-    packing: 0.3,
-    unpacking: 0.2,
-    storage: 0.4,
-    piano: 0.8,
-    fineArt: 0.6,
-  },
-  basePrice: 500, // Base price in CAD
-  distanceMultiplier: 0.5, // Per 100km
-  loadSizeMultiplier: 0.3, // Per cubic meter
-} as const;
+
 
 // Service types
 export const SERVICE_TYPES = [
@@ -82,7 +53,7 @@ export const COMPANY_INFO = {
   email: 'info@moversmove.ca',
   phone: '+1 (249) 979-2307',
   address: '2 County Court Blvd, Unit 333, Brampton, ON',
-  description: 'World-wide freight and logistics solutions. Professional moving, freight and logistics services across Canada. Brampton & GTA specialists. Get a free quote.',
+  description: 'World-wide freight and logistics solutions. Professional logistics, freight and logistics services across the globe. Brampton & GTA specialists. Get a free quote.',
 } as const;
 
 // Trust badges

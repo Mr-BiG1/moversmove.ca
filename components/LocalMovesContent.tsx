@@ -90,7 +90,7 @@ export function LocalMovesContent() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              Local Moving Services
+              Local Logistics Services
             </motion.h1>
             
             <motion.p 
@@ -99,7 +99,7 @@ export function LocalMovesContent() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
             >
-              Professional local moving services within the GTA and surrounding areas. Same-day service available with expert packing and furniture protection.
+              Professional local logistics services within the GTA and surrounding areas. Same-day service available with expert packing and furniture protection.
             </motion.p>
             
             <motion.div 
@@ -133,7 +133,7 @@ export function LocalMovesContent() {
               Service Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide local moving services throughout the Greater Toronto Area and surrounding communities
+              We provide local logistics services throughout the Greater Toronto Area and surrounding communities
             </p>
           </motion.div>
           
@@ -168,10 +168,10 @@ export function LocalMovesContent() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Local Moving Services?
+              Why Choose Our Local Logistics Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the difference with our professional local moving services
+              Experience the difference with our professional local logistics services
             </p>
           </motion.div>
           
@@ -254,7 +254,7 @@ export function LocalMovesContent() {
               What's Included in Local Moves
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive local moving services with everything you need
+              Comprehensive local logistics services with everything you need
             </p>
           </motion.div>
           
@@ -337,10 +337,10 @@ export function LocalMovesContent() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Local Moving Services & Areas
+              Local Logistics Services & Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional moving services throughout the GTA and beyond
+              Professional logistics services throughout the GTA and beyond
             </p>
           </motion.div>
           

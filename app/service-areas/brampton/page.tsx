@@ -53,7 +53,7 @@ export default function BramptonPage() {
             Professional Movers in Brampton
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
-            Trusted local moving services in Brampton with same-day availability and professional packing.
+            Trusted local logistics services in Brampton with same-day availability and professional packing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
@@ -71,7 +71,7 @@ export default function BramptonPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Our Brampton Moving Services?
+              Why Choose Our Brampton Logistics Services?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We're your local Brampton moving experts with years of experience serving the community.
@@ -100,7 +100,7 @@ export default function BramptonPage() {
               Brampton Service Areas
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We provide moving services throughout all of Brampton and surrounding areas.
+              We provide logistics services throughout all of Brampton and surrounding areas.
             </p>
           </div>
 
@@ -120,19 +120,19 @@ export default function BramptonPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Brampton Moving Services
+              Brampton Logistics Services
             </h2>
             
             <div className="prose prose-lg max-w-none">
               <p>
                 As your trusted Brampton moving company, we understand the unique needs of our local community. 
                 Whether you're moving within Brampton or to nearby areas like Mississauga, Vaughan, or Toronto, 
-                our experienced team provides reliable, professional moving services.
+                our experienced team provides reliable, professional logistics services.
               </p>
               
-              <h3>Our Brampton Moving Services Include:</h3>
+              <h3>Our Brampton Logistics Services Include:</h3>
               <ul>
-                <li><strong>Residential Moves:</strong> Complete home moving services with professional packing and unpacking</li>
+                <li><strong>Residential Moves:</strong> Complete home logistics services with professional packing and unpacking</li>
                 <li><strong>Commercial Moves:</strong> Office and business relocation throughout Brampton</li>
                 <li><strong>Same-Day Service:</strong> Quick local moves when you need them most</li>
                 <li><strong>Packing Services:</strong> Professional packing with protective materials</li>
@@ -149,7 +149,7 @@ export default function BramptonPage() {
 
               <h3>Local Brampton Landmarks We Serve:</h3>
               <p>
-                We provide moving services near popular Brampton locations including the Brampton City Hall, 
+                We provide logistics services near popular Brampton locations including the Brampton City Hall, 
                 Peel Memorial Centre for Integrated Health and Wellness, Gage Park, Chinguacousy Park, 
                 and the Brampton GO Station. No matter where you're moving in Brampton, we've got you covered.
               </p>

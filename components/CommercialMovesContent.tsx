@@ -88,7 +88,7 @@ export function CommercialMovesContent() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              Commercial Moving Services
+              Commercial Logistics Services
             </motion.h1>
             
             <motion.p 
@@ -97,7 +97,7 @@ export function CommercialMovesContent() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
             >
-              Professional commercial moving services for offices, retail stores, and businesses. Minimal disruption, efficient moves, and complete setup services.
+              Professional commercial logistics services for offices, retail stores, and businesses. Minimal disruption, efficient moves, and complete setup services.
             </motion.p>
             
             <motion.div 
@@ -131,7 +131,7 @@ export function CommercialMovesContent() {
               Commercial Business Types
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional moving services for all types of commercial businesses
+              Professional logistics services for all types of commercial businesses
             </p>
           </motion.div>
           
@@ -166,7 +166,7 @@ export function CommercialMovesContent() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Commercial Moving Services?
+              Why Choose Our Commercial Logistics Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience efficient commercial relocation with minimal business disruption
@@ -252,7 +252,7 @@ export function CommercialMovesContent() {
               What's Included in Commercial Moves
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive commercial moving services with everything your business needs
+              Comprehensive commercial logistics services with everything your business needs
             </p>
           </motion.div>
           
@@ -264,7 +264,7 @@ export function CommercialMovesContent() {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Moving Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Logistics Services</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -350,7 +350,7 @@ export function CommercialMovesContent() {
               viewport={{ once: true }}
               className="bg-gray-50 p-8 rounded-lg"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Moving Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Logistics Services</h3>
               <div className="space-y-3">
                 <Link href="/services/local-moves" className="block text-primary hover:text-accent transition-colors">
                   Local Moving Services

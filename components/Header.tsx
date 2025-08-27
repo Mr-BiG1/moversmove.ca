@@ -9,9 +9,9 @@ import { Button } from '@/components/ui/button'
 import { COMPANY_INFO, SERVICE_TYPES } from '@/lib/constants'
 
 const services = [
-  { name: 'Local Moves', href: '/services/local-moves', description: 'Professional local moving services across the GTA and Ontario' },
+  { name: 'Local Moves', href: '/services/local-moves', description: 'Professional local logistics services across the GTA and Ontario' },
   { name: 'International Moves', href: '/services/international-moves', description: 'Worldwide shipping and relocation services' },
-  { name: 'Residential Moves', href: '/services/residential-moves', description: 'Complete residential moving solutions' },
+  { name: 'Residential Moves', href: '/services/residential-moves', description: 'Complete residential logistics solutions' },
   { name: 'Commercial Moves', href: '/services/commercial-moves', description: 'Office and business relocation services' },
   { name: 'Specialty Moves', href: '/services/specialty-moves', description: 'Piano, fine art, and fragile item moving' },
   { name: 'Storage Solutions', href: '/services/storage-solutions', description: 'Secure short and long-term storage options' },
@@ -97,7 +97,7 @@ export function Header() {
                 priority
               />
               {/* <h1 className="text-xl font-bold text-gray-900">{COMPANY_INFO.name}</h1> */}
-              <p className="text-xs text-gray-600">Professional Moving Services</p>
+                              <p className="text-xs text-gray-600">Professional Logistics Services</p>
             </div>
           </Link>
 
@@ -205,11 +205,6 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/payment-calculator">
-              <Button variant="outline" size="sm">
-                Price Calculator
-              </Button>
-            </Link>
             <Link href="/quote">
               <Button className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
                 Get a Free Quote
@@ -318,11 +313,6 @@ export function Header() {
               </Link>
 
               <div className="pt-4 space-y-3">
-                <Link href="/payment-calculator" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="outline" className="w-full">
-                    Price Calculator
-                  </Button>
-                </Link>
                 <Link href="/quote" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold">
                     Get a Free Quote

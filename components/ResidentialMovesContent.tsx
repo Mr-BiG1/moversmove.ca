@@ -88,7 +88,7 @@ export function ResidentialMovesContent() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              Residential Moving Services
+              Residential Logistics Services
             </motion.h1>
             
             <motion.p 
@@ -97,7 +97,7 @@ export function ResidentialMovesContent() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
             >
-              Complete residential moving services for apartments, houses, and condos. Professional packing, furniture protection, and stress-free home relocation.
+              Complete residential logistics services for apartments, houses, and condos. Professional packing, furniture protection, and stress-free home relocation.
             </motion.p>
             
             <motion.div 
@@ -131,7 +131,7 @@ export function ResidentialMovesContent() {
               Residential Move Types
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive moving services for all types of residential properties
+              Comprehensive logistics services for all types of residential properties
             </p>
           </motion.div>
           
@@ -166,7 +166,7 @@ export function ResidentialMovesContent() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Residential Moving Services?
+              Why Choose Our Residential Logistics Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience stress-free residential relocation with our expert services
@@ -252,7 +252,7 @@ export function ResidentialMovesContent() {
               What's Included in Residential Moves
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive residential moving services with everything you need
+              Comprehensive residential logistics services with everything you need
             </p>
           </motion.div>
           
@@ -264,7 +264,7 @@ export function ResidentialMovesContent() {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Moving Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Logistics Services</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -350,7 +350,7 @@ export function ResidentialMovesContent() {
               viewport={{ once: true }}
               className="bg-gray-50 p-8 rounded-lg"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Moving Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Logistics Services</h3>
               <div className="space-y-3">
                 <Link href="/services/local-moves" className="block text-primary hover:text-accent transition-colors">
                   Local Moving Services

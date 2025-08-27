@@ -21,7 +21,7 @@ import { SERVICE_TYPES } from '@/lib/constants'
 const services = [
   {
     title: 'Local Moves',
-    description: 'Professional local moving services within the GTA and surrounding areas',
+    description: 'Professional local logistics services within the GTA and surrounding areas',
     icon: Truck,
     href: '/services/local-moves',
     features: ['Same-day service available', 'Professional packing', 'Furniture protection', 'Local expertise']
@@ -102,7 +102,7 @@ export function ServicesPageContent() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              Our Moving Services
+              Our Logistics Services
             </motion.h1>
             
             <motion.p 
@@ -141,7 +141,7 @@ export function ServicesPageContent() {
               Our Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer a complete range of moving services to meet all your relocation needs
+              We offer a complete range of logistics services to meet all your relocation needs
             </p>
           </motion.div>
           
@@ -195,7 +195,7 @@ export function ServicesPageContent() {
               Why Choose Our Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the difference with our professional moving services
+              Experience the difference with our professional logistics services
             </p>
           </motion.div>
           

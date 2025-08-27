@@ -89,7 +89,7 @@ export function InternationalMovesContent() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              International Moving Services
+              International Logistics Services
             </motion.h1>
             
             <motion.p 
@@ -167,7 +167,7 @@ export function InternationalMovesContent() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our International Moving Services?
+              Why Choose Our International Logistics Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience seamless international relocation with our expert services
@@ -253,7 +253,7 @@ export function InternationalMovesContent() {
               What's Included in International Moves
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Complete international moving services with comprehensive coverage
+              Complete international logistics services with comprehensive coverage
             </p>
           </motion.div>
           
@@ -265,7 +265,7 @@ export function InternationalMovesContent() {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Moving Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Logistics Services</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />

@@ -58,11 +58,11 @@ const faqs = [
   },
   {
     question: 'Do you provide free estimates?',
-    answer: 'Yes, we offer free, no-obligation estimates for all our moving services. We can provide quotes over the phone or schedule an in-home consultation.'
+    answer: 'Yes, we offer free, no-obligation estimates for all our logistics services. We can provide quotes over the phone or schedule an in-home consultation.'
   },
   {
     question: 'What areas do you serve?',
-    answer: 'We serve the entire Greater Toronto Area and surrounding communities, plus offer long-distance and international moving services across Canada and worldwide.'
+    answer: 'We serve the entire Greater Toronto Area and surrounding communities, plus offer long-distance and international logistics services across the globe.'
   },
   {
     question: 'Are you licensed and insured?',
@@ -95,7 +95,7 @@ export function ContactPageContent() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
             >
-              Get in touch with our team for professional moving services and support
+              Get in touch with our team for professional logistics services and support
             </motion.p>
             
             <motion.div 
@@ -161,9 +161,25 @@ export function ContactPageContent() {
                       <h3 className="text-lg font-semibold text-gray-900 mb-1">
                         {info.title}
                       </h3>
-                      <p className="text-lg text-gray-900 font-medium mb-1">
-                        {info.content}
-                      </p>
+                      {info.title === 'Phone Number' ? (
+                        <a 
+                          href={`tel:${info.content}`} 
+                          className="text-lg text-gray-900 font-medium mb-1 hover:text-primary transition-colors cursor-pointer"
+                        >
+                          {info.content}
+                        </a>
+                      ) : info.title === 'Email Address' ? (
+                        <a 
+                          href={`mailto:${info.content}`} 
+                          className="text-lg text-gray-900 font-medium mb-1 hover:text-primary transition-colors cursor-pointer"
+                        >
+                          {info.content}
+                        </a>
+                      ) : (
+                        <p className="text-lg text-gray-900 font-medium mb-1">
+                          {info.content}
+                        </p>
+                      )}
                       <p className="text-gray-600">
                         {info.description}
                       </p>
@@ -190,7 +206,7 @@ export function ContactPageContent() {
               Service Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide professional moving services throughout the Greater Toronto Area and beyond
+                              We provide professional logistics services throughout the Greater Toronto Area and beyond
             </p>
           </motion.div>
           
