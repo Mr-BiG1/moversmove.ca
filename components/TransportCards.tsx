@@ -78,38 +78,40 @@ export function TransportCards() {
                   </div>
                 </div>
 
-                {/* Middle Section */}
-                <div className="flex-1 space-y-4">
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-white drop-shadow-lg">{method.title}</h3>
-                    <p className="text-white/95 text-sm leading-relaxed drop-shadow-md">
-                      {method.description}
-                    </p>
+                {/* Middle Section - Fixed height to ensure consistent spacing */}
+                <div className="flex-1 flex flex-col justify-between min-h-[280px]">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-white drop-shadow-lg">{method.title}</h3>
+                      <p className="text-white/95 text-sm leading-relaxed drop-shadow-md">
+                        {method.description}
+                      </p>
+                    </div>
+
+                    {/* Features */}
+                    <div className="space-y-2">
+                      {method.features.map((feature, featureIndex) => (
+                        <motion.div
+                          key={feature}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: featureIndex * 0.1 }}
+                          viewport={{ once: true }}
+                          className="flex items-center space-x-2 text-sm"
+                        >
+                          <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></div>
+                          <span className="text-white/90 drop-shadow-sm">{feature}</span>
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Features */}
-                  <div className="space-y-2">
-                    {method.features.map((feature, featureIndex) => (
-                      <motion.div
-                        key={feature}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: featureIndex * 0.1 }}
-                        viewport={{ once: true }}
-                        className="flex items-center space-x-2 text-sm"
-                      >
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-white/90 drop-shadow-sm">{feature}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* CTA - Always visible at bottom */}
-                <div className="mt-6 pt-4 border-t border-white/20">
-                  <div className="inline-flex items-center space-x-2 bg-accent/90 backdrop-blur-sm px-4 py-3 rounded-lg text-white font-semibold text-sm group-hover:translate-x-1 transition-all duration-300 group-hover:bg-accent shadow-lg">
-                    <span>Explore More</span>
-                    <ArrowRight className="h-4 w-4" />
+                  {/* CTA - Always positioned at bottom */}
+                  <div className="mt-auto pt-4 border-t border-white/20">
+                    <div className="inline-flex items-center space-x-2 bg-accent/90 backdrop-blur-sm px-4 py-3 rounded-lg text-white font-semibold text-sm group-hover:translate-x-1 transition-all duration-300 group-hover:bg-accent shadow-lg">
+                      <span>Explore More</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
                   </div>
                 </div>
               </div>
