@@ -20,19 +20,8 @@ export default function TrackShipmentPage() {
     
     // Simulate API call delay
     setTimeout(() => {
-      // Placeholder tracking response
-      const mockResult = {
-        trackingId: trackingId,
-        status: 'In Transit',
-        location: 'Toronto, ON',
-        eta: '3 days',
-        lastUpdate: new Date().toLocaleDateString(),
-        history: [
-          { date: '2024-01-15', status: 'Package picked up', location: 'Brampton, ON' },
-          { date: '2024-01-16', status: 'In transit', location: 'Toronto, ON' },
-        ]
-      }
-      setTrackingResult(mockResult)
+      // Show "No data found" for any tracking ID
+      setTrackingResult(null)
       setIsLoading(false)
     }, 1500)
   }
@@ -132,7 +121,7 @@ export default function TrackShipmentPage() {
       </section>
 
       {/* Tracking Results */}
-      {trackingResult && (
+      {trackingResult === null && (
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -141,49 +130,17 @@ export default function TrackShipmentPage() {
               transition={{ duration: 0.8 }}
               className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden"
             >
-              {/* Header */}
-              <div className="bg-gradient-to-r from-primary to-accent text-white p-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold">Tracking ID: {trackingResult.trackingId}</h3>
-                    <p className="text-white/90">Last updated: {trackingResult.lastUpdate}</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold">{trackingResult.status}</div>
-                    <p className="text-white/90">ETA: {trackingResult.eta}</p>
-                  </div>
+              {/* No Data Found Message */}
+              <div className="p-12 text-center">
+                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Package className="h-10 w-10 text-gray-400" />
                 </div>
-              </div>
-
-              {/* Current Status */}
-              <div className="p-6 border-b border-gray-200">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <Truck className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Current Location</h4>
-                    <p className="text-gray-600">{trackingResult.location}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Tracking History */}
-              <div className="p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Tracking History</h4>
-                <div className="space-y-4">
-                  {trackingResult.history.map((event: any, index: number) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <p className="font-medium text-gray-900">{event.status}</p>
-                        <p className="text-sm text-gray-600">{event.location}</p>
-                        <p className="text-sm text-gray-500">{event.date}</p>
-                      </div>
-                    </div>
-                  ))}
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Data Found</h3>
+                <p className="text-gray-600 mb-6 max-w-md mx-auto">
+                  We couldn't find any tracking information for the provided tracking ID. Please check the number and try again.
+                </p>
+                <div className="text-sm text-gray-500">
+                  <p>If you believe this is an error, please contact our support team.</p>
                 </div>
               </div>
             </motion.div>
