@@ -165,23 +165,26 @@ export function FaqsPageContent() {
     setSubmitStatus('idle')
 
     try {
+      const formData = new FormData()
+      formData.append('name', data.name)
+      formData.append('email', data.email)
+      formData.append('question', data.question)
+      formData.append('turnstileToken', turnstileToken)
+      formData.append('pageSource', '/faqs')
+
       const response = await fetch('/api/faq-question', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...data,
-          turnstileToken,
-          pageSource: '/faqs'
-        }),
+        body: formData,
       })
 
-      if (response.ok) {
+      const result = await response.json()
+
+      if (response.ok && result.success) {
         setSubmitStatus('success')
         reset()
         setTurnstileToken(null)
       } else {
+        console.error('FAQ submission failed:', result.error)
         setSubmitStatus('error')
       }
     } catch (error) {
