@@ -184,11 +184,9 @@ export function FaqsPageContent() {
         reset()
         setTurnstileToken(null)
       } else {
-        console.error('FAQ submission failed:', result.error)
         setSubmitStatus('error')
       }
     } catch (error) {
-      console.error('FAQ question submission error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)

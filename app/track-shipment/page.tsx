@@ -7,9 +7,16 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
+interface TrackingResult {
+  notFound?: boolean;
+  status?: string;
+  location?: string;
+  estimatedDelivery?: string;
+}
+
 export default function TrackShipmentPage() {
   const [trackingId, setTrackingId] = useState('')
-  const [trackingResult, setTrackingResult] = useState<any>(null)
+  const [trackingResult, setTrackingResult] = useState<TrackingResult | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
   const handleTrackShipment = async (e: React.FormEvent) => {

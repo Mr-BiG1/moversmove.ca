@@ -2,19 +2,19 @@ import { NextRequest, NextResponse } from 'next/server'
 import { faqQuestionSchema } from '@/lib/schemas'
 import { sendEmail, createFaqEmail, verifyTurnstileToken } from '@/lib/email'
 import { rateLimit, getClientIP } from '@/lib/rate-limit'
-import { generateId } from '@/lib/utils'
+import { generateId, logger } from '@/lib/utils'
 
 export async function POST(request: NextRequest) {
   const requestId = generateId()
   const clientIP = getClientIP(request)
   
-  console.log(`[${requestId}] FAQ question request from IP: ${clientIP}`)
+  logger.log(`[${requestId}] FAQ question request from IP: ${clientIP}`)
 
   try {
     // Rate limiting
     const rateLimitResult = await rateLimit(clientIP)
     if (!rateLimitResult.success) {
-      console.log(`[${requestId}] Rate limit exceeded for IP: ${clientIP}`)
+      logger.log(`[${requestId}] Rate limit exceeded for IP: ${clientIP}`)
       return NextResponse.json(
         { 
           success: false, 
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     // Validate form data
     const validationResult = faqQuestionSchema.safeParse(data)
     if (!validationResult.success) {
-      console.log(`[${requestId}] Validation failed:`, validationResult.error.errors)
+      logger.log(`[${requestId}] Validation failed:`, validationResult.error.errors)
       return NextResponse.json(
         { 
           success: false, 
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
 
     // Verify Turnstile token
     if (!data.turnstileToken) {
-      console.log(`[${requestId}] Missing Turnstile token`)
+      logger.log(`[${requestId}] Missing Turnstile token`)
       return NextResponse.json(
         { 
           success: false, 
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
 
     const turnstileValid = await verifyTurnstileToken(data.turnstileToken)
     if (!turnstileValid) {
-      console.log(`[${requestId}] Invalid Turnstile token`)
+      logger.log(`[${requestId}] Invalid Turnstile token`)
       return NextResponse.json(
         { 
           success: false, 
@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
     )
 
     if (!emailResult.success) {
-      console.error(`[${requestId}] Email sending failed:`, emailResult.error)
+      logger.error(`[${requestId}] Email sending failed:`, emailResult.error)
       return NextResponse.json(
         { 
           success: false, 
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Log successful submission
-    console.log(`[${requestId}] FAQ question submitted successfully for ${data.email}`)
+    logger.log(`[${requestId}] FAQ question submitted successfully for ${data.email}`)
 
     return NextResponse.json({
       success: true,
@@ -111,7 +111,7 @@ export async function POST(request: NextRequest) {
     })
 
   } catch (error) {
-    console.error(`[${requestId}] Unexpected error:`, error)
+    logger.error(`[${requestId}] Unexpected error:`, error)
     return NextResponse.json(
       { 
         success: false, 

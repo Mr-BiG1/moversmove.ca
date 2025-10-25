@@ -56,11 +56,9 @@ export function ContactForm() {
         reset()
         setTurnstileToken(null)
       } else {
-        console.error('Contact submission failed:', result.error)
         setSubmitStatus('error')
       }
     } catch (error) {
-      console.error('Contact form submission error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)

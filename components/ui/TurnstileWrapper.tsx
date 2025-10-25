@@ -29,7 +29,6 @@ export function TurnstileWrapper({
   // Development mode bypass for testing
   const handleDevModeBypass = () => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('Turnstile bypassed in development mode')
       onVerify('dev-mode-bypass-token')
     }
   }

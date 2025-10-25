@@ -20,7 +20,7 @@ export const quoteSchema = z.object({
   email: emailSchema,
   phone: phoneSchema,
   pickupAddress: z.string().min(10, 'Please enter a complete pickup address').max(200, 'Address must be less than 200 characters'),
-  dropOffAddress: z.string().min(10, 'Please enter a complete drop-off address').max(200, 'Address must be less than 200 characters').optional(),
+  dropOffAddress: z.string().max(200, 'Address must be less than 200 characters').optional().or(z.literal('')),
   description: z.string().min(10, 'Please describe what you need').max(1000, 'Description must be less than 1000 characters'),
   preferredDate: z.string().optional(),
   serviceType: z.enum(['Local Moves', 'International Moves', 'Residential Moves', 'Commercial Moves', 'Specialty Moves', 'Storage Solutions']),
