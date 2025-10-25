@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { COMPANY_INFO, SERVICE_TYPES } from '@/lib/constants'
+import { COMPANY_INFO } from '@/lib/constants'
 
 const services = [
   { name: 'Local Moves', href: '/services/local-moves', description: 'Professional local logistics services across the GTA and Ontario' },
@@ -246,22 +246,22 @@ export function Header() {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-white border-t border-gray-200"
           >
-            <div className="container mx-auto px-4 py-6 space-y-4">
+            <div className="container mx-auto px-4 py-6 space-y-2 max-h-[calc(100vh-200px)] overflow-y-auto">
               <Link
                 href="/"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
+                className="block py-3 text-gray-700 hover:text-primary transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
 
-              <div className="space-y-2">
-                <div className="font-medium text-gray-900 mb-2">Services</div>
+              <div className="border-t border-gray-200 pt-2">
+                <div className="font-semibold text-gray-900 mb-2 py-2">Services</div>
                 {services.map((service) => (
                   <Link
                     key={service.name}
                     href={service.href}
-                    className="block py-2 pl-4 text-gray-600 hover:text-primary transition-colors"
+                    className="block py-2 pl-4 text-gray-600 hover:text-primary transition-colors text-sm"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {service.name}
@@ -269,13 +269,13 @@ export function Header() {
                 ))}
               </div>
 
-              <div className="space-y-2">
-                <div className="font-medium text-gray-900 mb-2">Transport</div>
+              <div className="border-t border-gray-200 pt-2">
+                <div className="font-semibold text-gray-900 mb-2 py-2">Transport</div>
                 {transportMethods.map((method) => (
                   <Link
                     key={method.name}
                     href={method.href}
-                    className="block py-2 pl-4 text-gray-600 hover:text-primary transition-colors"
+                    className="block py-2 pl-4 text-gray-600 hover:text-primary transition-colors text-sm"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {method.name}
@@ -283,38 +283,40 @@ export function Header() {
                 ))}
               </div>
 
-              <Link
-                href="/about"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
-              <Link
-                href="/faqs"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                FAQs
-              </Link>
-              <Link
-                href="/track-shipment"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Track Shipment
-              </Link>
+              <div className="border-t border-gray-200 pt-2">
+                <Link
+                  href="/about"
+                  className="block py-3 text-gray-700 hover:text-primary transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block py-3 text-gray-700 hover:text-primary transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+                <Link
+                  href="/faqs"
+                  className="block py-3 text-gray-700 hover:text-primary transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FAQs
+                </Link>
+                <Link
+                  href="/track-shipment"
+                  className="block py-3 text-gray-700 hover:text-primary transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Track Shipment
+                </Link>
+              </div>
 
-              <div className="pt-4 space-y-3">
+              <div className="pt-4 pb-2 border-t border-gray-200">
                 <Link href="/quote" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold">
+                  <Button className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold py-3">
                     Get a Free Quote
                   </Button>
                 </Link>

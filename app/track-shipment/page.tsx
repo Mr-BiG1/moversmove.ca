@@ -21,7 +21,7 @@ export default function TrackShipmentPage() {
     // Simulate API call delay
     setTimeout(() => {
       // Show "No data found" for any tracking ID
-      setTrackingResult(null)
+      setTrackingResult({ notFound: true })
       setIsLoading(false)
     }, 1500)
   }
@@ -121,7 +121,7 @@ export default function TrackShipmentPage() {
       </section>
 
       {/* Tracking Results */}
-      {trackingResult === null && (
+      {trackingResult?.notFound && (
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
