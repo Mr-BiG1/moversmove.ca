@@ -26,12 +26,12 @@ export const rateLimit = async (identifier: string): Promise<{
   resetTime: number;
   error?: string;
 }> => {
-  try {
-    const now = Date.now();
-    const key = `rate_limit:${identifier}`;
+  const now = Date.now();
+  const key = `rate_limit:${identifier}`;
 
-    if (redis) {
-      // Use Redis for production
+  // Try Redis first if configured
+  if (redis) {
+    try {
       const pipeline = redis.pipeline();
       
       // Get current count and reset time
@@ -64,58 +64,66 @@ export const rateLimit = async (identifier: string): Promise<{
         remaining: RATE_LIMIT.REQUESTS - currentCount - 1,
         resetTime,
       };
-    } else {
-      // Use in-memory store for development
-      const current = memoryStore.get(key);
-      
-      if (current && now < current.resetTime) {
-        if (current.count >= RATE_LIMIT.REQUESTS) {
-          return {
-            success: false,
-            remaining: 0,
-            resetTime: current.resetTime,
-            error: 'Rate limit exceeded. Please try again later.',
-          };
-        }
-        
-        current.count++;
-        memoryStore.set(key, current);
-        
+    } catch (redisError) {
+      // Log error but fall through to in-memory store
+      // Use warn level so production logs clearly show that Redis is unavailable
+      console.warn('Redis rate limiting failed, falling back to in-memory store:', redisError);
+      // Continue to in-memory store fallback
+    }
+  }
+
+  // Use in-memory store as fallback
+  try {
+    const current = memoryStore.get(key);
+    
+    if (current && now < current.resetTime) {
+      if (current.count >= RATE_LIMIT.REQUESTS) {
         return {
-          success: true,
-          remaining: RATE_LIMIT.REQUESTS - current.count,
+          success: false,
+          remaining: 0,
           resetTime: current.resetTime,
-        };
-      } else {
-        // Reset or create new entry
-        const newEntry = {
-          count: 1,
-          resetTime: now + RATE_LIMIT.WINDOW,
-        };
-        
-        memoryStore.set(key, newEntry);
-        
-        // Clean up old entries
-        for (const [k, v] of Array.from(memoryStore.entries())) {
-          if (now > v.resetTime) {
-            memoryStore.delete(k);
-          }
-        }
-        
-        return {
-          success: true,
-          remaining: RATE_LIMIT.REQUESTS - 1,
-          resetTime: newEntry.resetTime,
+          error: 'Rate limit exceeded. Please try again later.',
         };
       }
+      
+      current.count++;
+      memoryStore.set(key, current);
+      
+      return {
+        success: true,
+        remaining: RATE_LIMIT.REQUESTS - current.count,
+        resetTime: current.resetTime,
+      };
+    } else {
+      // Reset or create new entry
+      const newEntry = {
+        count: 1,
+        resetTime: now + RATE_LIMIT.WINDOW,
+      };
+      
+      memoryStore.set(key, newEntry);
+      
+      // Clean up old entries
+      for (const [k, v] of Array.from(memoryStore.entries())) {
+        if (now > v.resetTime) {
+          memoryStore.delete(k);
+        }
+      }
+      
+      return {
+        success: true,
+        remaining: RATE_LIMIT.REQUESTS - 1,
+        resetTime: newEntry.resetTime,
+      };
     }
   } catch (error) {
+    // If all rate limiting fails, allow the request but log the error
     console.error('Rate limiting error:', error);
+    // Return success to not block users when rate limiting is unavailable
     return {
-      success: false,
-      remaining: 0,
+      success: true,
+      remaining: RATE_LIMIT.REQUESTS,
       resetTime: Date.now() + RATE_LIMIT.WINDOW,
-      error: 'Rate limiting service unavailable.',
     };
   }
 };
