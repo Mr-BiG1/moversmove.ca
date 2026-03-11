@@ -2,6 +2,7 @@ import nodemailer from 'nodemailer';
 import { Resend } from 'resend';
 import DOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
+import { logger } from './utils';
 
 const window = new JSDOM('').window;
 const purify = DOMPurify(window as any);
@@ -205,17 +206,17 @@ export const sendEmail = async (
     
     // Development fallback - log to console
     if (process.env.NODE_ENV === 'development') {
-      console.log('=== EMAIL SENT (DEV MODE) ===');
-      console.log('To:', to);
-      console.log('Subject:', subject);
-      console.log('Text:', text);
-      console.log('============================');
+      logger.log('=== EMAIL SENT (DEV MODE) ===');
+      logger.log('To:', to);
+      logger.log('Subject:', subject);
+      logger.log('Text:', text);
+      logger.log('============================');
       return { success: true };
     }
     
     throw new Error('No email service configured');
   } catch (error) {
-    console.error('Email sending failed:', error);
+    logger.error('Email sending failed:', error);
     return { 
       success: false, 
       error: error instanceof Error ? error.message : 'Unknown error' 
@@ -240,7 +241,7 @@ export const verifyTurnstileToken = async (token: string): Promise<boolean> => {
     const data = await response.json();
     return data.success === true;
   } catch (error) {
-    console.error('Turnstile verification failed:', error);
+    logger.error('Turnstile verification failed:', error);
     return false;
   }
 };

@@ -1,3 +1,5 @@
+import { logger } from './utils';
+
 interface TurnstileResponse {
   success: boolean;
   error?: string;
@@ -7,13 +9,13 @@ export async function verifyTurnstile(token: string): Promise<TurnstileResponse>
   try {
     // Development mode bypass
     if (process.env.NODE_ENV === 'development' && token === 'dev-mode-bypass-token') {
-      console.warn('Turnstile verification bypassed in development mode');
+      logger.warn('Turnstile verification bypassed in development mode');
       return { success: true };
     }
 
     // Check if secret key is configured
     if (!process.env.TURNSTILE_SECRET_KEY) {
-      console.error('Turnstile secret key not configured');
+      logger.error('Turnstile secret key not configured');
       return { 
         success: false, 
         error: 'Turnstile not configured on server' 
@@ -22,7 +24,7 @@ export async function verifyTurnstile(token: string): Promise<TurnstileResponse>
 
     // Validate token format
     if (!token || token.length < 10) {
-      console.warn('Turnstile token validation failed: token too short or missing');
+      logger.warn('Turnstile token validation failed: token too short or missing');
       return { 
         success: false, 
         error: 'Invalid token format' 
@@ -46,9 +48,9 @@ export async function verifyTurnstile(token: string): Promise<TurnstileResponse>
 
     const result = await response.json();
 
-    // Log verification result for debugging (remove in production)
+    // Log verification result for debugging
     if (process.env.NODE_ENV === 'development') {
-      console.log('Turnstile verification result:', result);
+      logger.log('Turnstile verification result:', result);
     }
 
     if (result.success === true) {
@@ -82,7 +84,7 @@ export async function verifyTurnstile(token: string): Promise<TurnstileResponse>
       };
     }
   } catch (error) {
-    console.error('Turnstile verification error:', error);
+    logger.error('Turnstile verification error:', error);
     return { 
       success: false, 
       error: 'Verification service unavailable' 

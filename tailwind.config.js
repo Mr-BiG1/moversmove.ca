@@ -92,6 +92,10 @@ module.exports = {
           "0%, 100%": { boxShadow: "0 0 20px rgba(10, 93, 181, 0.3)" },
           "50%": { boxShadow: "0 0 30px rgba(10, 93, 181, 0.6)" },
         },
+        "marquee": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -102,6 +106,7 @@ module.exports = {
         "slide-in-from-left": "slide-in-from-left 0.5s ease-out",
         "slide-in-from-right": "slide-in-from-right 0.5s ease-out",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "marquee": "marquee 35s linear infinite",
       },
     },
   },
